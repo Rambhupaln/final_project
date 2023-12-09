@@ -15,7 +15,7 @@ console.log('TLS module is available.');
 require('dotenv').config();
 
 const corsOptions = {
-  origin: 'http://localhost:3000', // Replace with the origin of your React app
+  origin: 'http://138.197.5.53:3000', // Replace with the origin of your React app
   credentials: true,
 };
 
@@ -25,7 +25,7 @@ app.use(compression());
 app.use(bodyParser.json());
 
 //mongoose.set('debug', true); 
-mongoose.connect('mongodb+srv://doadmin:5nW0z9h876gCS21f@db-mongodb-nyc3-73117-ae99b9ab.mongo.ondigitalocean.com/budget?replicaSet=db-mongodb-nyc3-73117&tls=true&authSource=admin', {
+mongoose.connect('mongodb+srv://doadmin:1N8B26UDKW4s57b9@db-mongodb-nyc3-37633-68124317.mongo.ondigitalocean.com/budget?replicaSet=db-mongodb-nyc3-37633&tls=true&authSource=admin', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -158,6 +158,6 @@ app.get('/montlyExpenses', async (req, res) => {
 
 
 
-app.listen(port, 'localhost', () => {
+app.listen(port, '104.131.161.186', () => {
   console.log(`Server is running on port ${port}`);
 });
